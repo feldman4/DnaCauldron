@@ -43,7 +43,7 @@ class StickyEndSeq(Seq):
             )
         else:
             sticky_end_seq = StickyEndSeq(
-                str(Seq(self).reverse_complement()),
+                str(Seq(str(self)).reverse_complement()),
                 left_end=None
                 if self.right_end is None
                 else self.right_end.reverse_complement(),
